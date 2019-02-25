@@ -1,3 +1,4 @@
+
 ###question 1
 
 x <- rnorm(999, 100, 20)
