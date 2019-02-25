@@ -26,6 +26,9 @@ abline(lm1_q1)
 abline(lm2_q1, col = "red")
 
 ###question 2
+#referenced Vini Miranda's code: https://gist.githubusercontent.com/viniciusmss/
+#a52a9630abd50fa1237060df995f8657/raw/bdd6410bcbf21a3bb1059798b92008b613235b8e/
+#Statistics%2520Scavenger%2520Hunt.R?fbclid=IwAR36swGGUYk_yURlN92YIoEvu4Yr8xmw3NOpomq8-oOj10DELfzeeZaaWxA
 
 library(arm)
 library(Matching)
