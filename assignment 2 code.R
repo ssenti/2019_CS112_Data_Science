@@ -145,6 +145,11 @@ for (age in 17:55) {
     lwd = 2)
 }
 
+table_q2 <- data.frame(t(conf_exp_med), t(conf_exp_quant), t(conf_pred_med), t(conf_pred_quant))
+colnames(table_q2) <- c("Expected CI Median Lower", "Expected CI Median Upper", "Expected CI Quant75% Lower", 
+                        "Expected CI Quant75% Upper", "Predicted CI Median Lower", "Predicted CI Median Upper", "Predicted CI Quant75% Lower", "Predicted CI Quant75% Lower")
+write.csv(table_q2,'table_q2.csv')
+
 ###question 3
 
 library(datasets)
