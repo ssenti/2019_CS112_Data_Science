@@ -89,8 +89,8 @@ text(x=100, y=-0.6, labels= "Model with interaction term" )
 
 #recall the data
 foo <- read.csv("https://course-resources.minerva.kgi.edu/uploaded_files/mke/00086677-3767/peace.csv")
-foo <- foo[c(-19, -47,-4, -16, -84, -93, -98), ]
-which(is.na(foo$pbs5l) == TRUE)
+foo <- foo[c(-10, -47), ]
+foo5yr <- foo[!is.na(foo$pbs5l),]
 
 #(NUMBER 3 MODIFIED)
 Tr <- rep(0, length(foo$uncint))
