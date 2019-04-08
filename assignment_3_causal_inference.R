@@ -165,10 +165,6 @@ summary(mout5_BA)
 
 ###RESULTS 
 
-Table1. The Effectiveness of UN Peacekeeping Interventions On 2 Years And 5 Years After The War. The propensity 
-score model has a logit functional form with the following confounders — wartype, logcost, wardur, factnum, 
-factnum2, trnsfcap, untype4, treaty, develop, exp, decade. I have used the same variables to do Genetic matching 
-and MatchBalance. 
                             tmt effect (bias adj) 	tmt effect (no bias adj)	p-value (from MatchBalance)
 logistic regression
 len success 2 years 		                NA*                      NA                     0.00010717 
