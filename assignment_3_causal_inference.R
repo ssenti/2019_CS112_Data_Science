@@ -32,7 +32,7 @@ mean_logcost <- mean(foo$logcost)
 mean_factnum <- mean(foo$factnum)
 mean_factnum2 <- mean(foo$factnum2)
 mean_trnsfcap <- mean(foo$trnsfcap)
-mean_develop <- mean(foo$develop);
+mean_develop <- mean(foo$develop)
 mean_exp <- mean(foo$exp)
 mean_decade <- mean(foo$decade) 
 mean_treaty <- mean(foo$treaty)
