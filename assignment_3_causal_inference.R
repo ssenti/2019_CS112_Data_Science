@@ -118,7 +118,7 @@ prop <- glm(uncint~wartype+logcost+wardur+factnum+factnum2+trnsfcap
 X <- prop$fitted.values
 
 prop_mout_2 <- Match(Y=foo$pbs2l, Tr = Tr, X=X,BiasAdjust=TRUE)
-prop_mout_5 <- Match(Y=foo$pbs5l, Tr = Tr, X=X, BiasAdjust=TRUE)
+prop_mout_5 <- Match(Y=foo$pbs5l, Tr = foo5yr$uncint, X=X, BiasAdjust=TRUE)
 
 prop_mb_2 <- MatchBalance(uncint~ wartype+logcost+wardur+factnum+factnum2+trnsfcap
                           +untype4+treaty+develop+exp+decade, 
@@ -144,12 +144,12 @@ genout5 <- GenMatch(X=X5, Tr=foo5yr$uncint, estimand="ATT", M=1, replace=TRUE, t
   
 mout2 <- Match(Y=foo$pbs2l, X=X2, Tr=Tr, estimand="ATT", M=1, replace=TRUE, ties=TRUE,
               Weight.matrix = genout2)
-mout2_BA <- Match(Y=foo$pbs2l, X=X2, Tr=foo5yr$uncint, estimand="ATT", M=1, BiasAdjust = TRUE, replace=TRUE, ties=TRUE,
+mout2_BA <- Match(Y=foo$pbs2l, X=X2, Tr=Tr, estimand="ATT", M=1, BiasAdjust = TRUE, replace=TRUE, ties=TRUE,
                   Weight.matrix = genout2)
 
-mout5 <- Match(Y=foo$pbs5l, X=X5, Tr=Tr, estimand="ATT", M=1, replace=TRUE, ties=TRUE,
+mout5 <- Match(Y=foo$pbs5l, X=X5, Tr=foo5yr$uncint, estimand="ATT", M=1, replace=TRUE, ties=TRUE,
                Weight.matrix = genout5)
-mout5_BA <- Match(Y=foo$pbs5l, X=X5, Tr=Tr, estimand="ATT", M=1, BiasAdjust = TRUE, replace=TRUE, ties=TRUE,
+mout5_BA <- Match(Y=foo$pbs5l, X=X5, Tr=foo5yr$uncint, estimand="ATT", M=1, BiasAdjust = TRUE, replace=TRUE, ties=TRUE,
                   Weight.matrix = genout5)
 
 mb2 <- MatchBalance(Tr~ wartype+logcost+wardur+factnum+factnum2+trnsfcap
