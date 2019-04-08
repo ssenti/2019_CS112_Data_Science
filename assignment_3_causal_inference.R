@@ -175,12 +175,12 @@ len success 2 years 		                NA*                      NA               
 len success 5 years 		                NA*                      NA                     0.00010717 
 
 p- score matching	  	
-len success 2 years 					         0.25481                   NA**                   0.0013272 
-len success 5 years 					         0.26978                   NA**                   0.0013272 
+len success 2 years 					 0.25481                   NA**                   0.0013272 
+len success 5 years 					 0.26978                   NA**                   0.0013272 
 
 gen match
-len success 2 years 					        -0.032229                  NA**                   2.22e-16 
-len success 5 years 					         0.018088                  NA**                   0.00014128 
+len success 2 years 					-0.032229                  NA**                   2.22e-16 
+len success 5 years 					 0.018088                  NA**                   0.00014128 
 
 *No need to provide bias-adjusted results for logistic regression--only for matching estimates.
 **Only provide a treatment effect for matching results if your leximin p-value is above 0.10. Otherwise write in "NA".
