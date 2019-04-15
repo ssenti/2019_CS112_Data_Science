@@ -1,5 +1,5 @@
 
-###question 1
+###questionn 1
 
 x <- rnorm(999, 100, 20)
 x1 <- 5*x + rnorm(999, 0, 10)
@@ -17,7 +17,7 @@ lm2_q1 <- lm(x2 ~ x_outl, data =df2)
 
 summary(lm1_q1)
 summary(lm2_q1)
-            
+
 plot(x_outl, x2,
      main = "Regression of 999 vs 1000 Data Points",
      xlab = "Independent Variables",
@@ -99,8 +99,8 @@ conf_exp_quant <- apply(storage2, 2, quantile, probs = c(0.025, 0.975))
 conf_pred_med <- apply(storage3, 2, quantile, probs = c(0.025, 0.975))
 conf_pred_quant <- apply(storage4, 2, quantile, probs = c(0.025, 0.975))
 
-plot(x = c(1:20000), y = c(1:20000), type = "n", xlim = c(17,55), ylim = c(0,20000), 
-     main = "Re78 CI Expected", xlab = "Age", 
+plot(x = c(1:20000), y = c(1:20000), type = "n", xlim = c(17,55), ylim = c(0,20000),
+     main = "Re78 CI Expected", xlab = "Age",
      ylab = "Re78")
 
 for (age in 17:55) {
@@ -122,8 +122,8 @@ for (age in 17:55) {
     lwd = 2)
 }
 
-plot(x = c(1:20000), y = c(1:20000), type = "n", xlim = c(17,55), ylim = c(0,20000), 
-     main = "Re78 CI Predicted", xlab = "Age", 
+plot(x = c(1:20000), y = c(1:20000), type = "n", xlim = c(17,55), ylim = c(0,20000),
+     main = "Re78 CI Predicted", xlab = "Age",
      ylab = "Re78")
 
 for (age in 17:55) {
@@ -146,7 +146,7 @@ for (age in 17:55) {
 }
 
 table_q2 <- data.frame(t(conf_exp_med), t(conf_exp_quant), t(conf_pred_med), t(conf_pred_quant))
-colnames(table_q2) <- c("Expected CI Median Lower", "Expected CI Median Upper", "Expected CI Quant75% Lower", 
+colnames(table_q2) <- c("Expected CI Median Lower", "Expected CI Median Upper", "Expected CI Quant75% Lower",
                         "Expected CI Quant75% Upper", "Predicted CI Median Lower", "Predicted CI Median Upper", "Predicted CI Quant75% Lower", "Predicted CI Quant75% Lower")
 write.csv(table_q2,'table_q2.csv')
 
@@ -178,7 +178,7 @@ summary(confint(lm_q3))
 confint(lm_q3)
 
 hist(result,
-     main="Bootstrapped Coefficients", 
+     main="Bootstrapped Coefficients",
      xlab="Coefficients")
 
 ###question 4
@@ -208,15 +208,15 @@ glm_q5 <- glm(treat ~ age + education + black + hispanic + married + nodegree + 
 glm_prob = predict(glm_q5, type="response")
 nsw$prob <- glm_prob
 
-hist(nsw[which(nsw$treat == 1),]$prob, 
-     main="Probabilities for Treatment (Treatment Group)", 
+hist(nsw[which(nsw$treat == 1),]$prob,
+     main="Probabilities for Treatment (Treatment Group)",
      xlab="Probability",
      col="red",
      xlim=c(0,1),
      ylim=c(0, 200))
 
-hist(nsw[which(nsw$treat == 0),]$prob, 
-     main="Probabilities for Treatment (Control Group)", 
+hist(nsw[which(nsw$treat == 0),]$prob,
+     main="Probabilities for Treatment (Control Group)",
      xlab="Probability",
      col="blue",
      xlim=c(0,1),
@@ -224,4 +224,3 @@ hist(nsw[which(nsw$treat == 0),]$prob,
 
 summary(nsw[which(nsw$treat == 1),]$prob)
 summary(nsw[which(nsw$treat == 0),]$prob)
-
