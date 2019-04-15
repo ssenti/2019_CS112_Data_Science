@@ -1,5 +1,5 @@
 
-###questionn 1
+###questionnn 1
 
 x <- rnorm(999, 100, 20)
 x1 <- 5*x + rnorm(999, 0, 10)
