@@ -1,5 +1,5 @@
 
-# CS112: Data Science class at [Minerva] (https://www.theguardian.com/education/2020/jul/30/the-future-of-education-or-just-hype-the-rise-of-minerva-the-worlds-most-selective-university)
+# CS112: Data Science class at [Minerva](https://www.theguardian.com/education/2020/jul/30/the-future-of-education-or-just-hype-the-rise-of-minerva-the-worlds-most-selective-university)
 
 Taught by Professor [Alexis Diamond, Ph.D.](https://www.minerva.kgi.edu/people/alexis-diamond-phd/)
 
